@@ -30,13 +30,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    .forEach will modify the original array that is passed in, while .map will return a new array instead and not change the original array.
+
 2. What is the difference between a function and a method?
+
+    A function and a method are the same thing, but the difference is in semantics. When we say function, we mean something that exists by itself. A method, however, is a function that belongs to an object, and must be invoked by using dot notation, such as object.method(); where with a function we can invoke it by using just its name, so function();
 
 3. What is closure?
 
+    The closure property of a function lets you know what references or variables something has access to. For example, a child function of parentFunction would have access to childFunction's variables, in addition to the variables previously declared in parentFunction. This is called lexical scoping, as the childFunction looks at where it is (nested inside parentFunction) and then is able to use the variables from parentFunction.
+
 4. Describe the four rules of the 'this' keyword.
 
+    When used outside of a function, it will refer to the window or global object, due to window binding.
+
+    When used with .call, .apply, or .bind, 'this' will refer to the argument that we pass in, and is known as explicit binding.
+
+    When used while invoking a function, such as with a method, 'this' will refer to what is to the left of the dot notation, and will only work if the object has a method. This is known as implicit binding.
+
+    When used with the 'new' keyword to produce a new object, 'this' will refer to the new object.
+
+
 5. Why do we need super() in an extended class?
+
+    In an extended class, we need to use super() to call the parent constructor's key:value pairs into the extended class, otherwise we will not have access to the information we're trying to inherit from the parent constructor.
 
 ## Project Set up
 
