@@ -34,9 +34,11 @@ class CubeMaker extends CuboidMaker {
     }
 }
 
+CubeMaker.prototype = Object.create(CuboidMaker.prototype);
+
 let cube = new CubeMaker(2, 2, 2)
 
-CubeMaker.prototype = Object.create(CuboidMaker.prototype);
+
 
 //console.log(cube.volume()); // 8
 //console.log(cube.surfaceArea()); // 24
